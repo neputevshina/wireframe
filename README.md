@@ -55,7 +55,8 @@ Arguments:
 
 ```
 
-A Wireframe host **must** support all following
+A Wireframe host **must** support all of the following tag, sample and frame types.
+
 ### Tag types
 #### `Request ID`
 A unique string of a request to a service. 
@@ -77,7 +78,6 @@ Can have two nested objects:
 ##### `Range`
 Range of the values. 
 Two numbers, start and end of the range, separated by space.
-
 Mutually exclusive with `Labels`.
 ##### `Labels`
 Only for `custom`: comma-separated list of strings to be used as labels on the scale. 
@@ -92,11 +92,11 @@ SHA-256 hash value of the **whole** original audio file fed to the process.
 - `float64`
 - `bfloat16`
 ### Frame types
-These are **only** valid values of the frame type field.
+These are **only** valid values of this field.
 - `uniform` — frame type of an STFT
 - `samples` — horizontal audio-like samples of data
 - `envelope` — single value per frame
-- `point cloud` (two words, separated by space) — triplets of: value, frame shift, bin shift; directly corresponds to a reassigned spectrogram
+- `point cloud` (two words, separated by space) — triplets of: value, bin shift, frame shift; directly corresponds to a reassigned spectrogram
 - TBD: `tessellation` — Gabor frames, frame type of a sliced constant-Q transform (sliCQ)
 - TBD: `partials` — MPE and sinusoidal/Loris components.
 ### Vertical scales
