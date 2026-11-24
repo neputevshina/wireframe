@@ -16,7 +16,7 @@ Line breaks in text parts are `\n`, field separator is `: `,
 tabulation level is used for nesting and corresponding amount of `\t` specifies the relation to the parent. 
 Binary part is encoded in little-endian. Header is separated from data by `\n\n`.
 
-Default host's listen ports are 44444/udp and 44445/tcp.
+Default host's listen ports are 44444/udp and 44445/tcp, but most processes should communicate through stdin/stdout.
 
 Time codes in a valid Wireframe stream are monotonic. 
 A host **can not** cut excessive spaces, values are always separated using a single space. 
