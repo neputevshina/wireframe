@@ -21,6 +21,8 @@ Default host's listen ports are 44444/udp and 44445/tcp, but most processes shou
 Time codes in a valid Wireframe stream are monotonic. 
 A host **can not** cut excessive spaces, values are always separated using a single space. 
 Stream is considered invalid otherwise.
+Most minimal response stream can contain no tags.
+Overlapping events, e.g. sample frames with size 1024 but with time codes spaced with 512, are considered invalid.
 
 A stream can represent only one channel of audio and only one result. 
 Currently I do not know should Wireframe support more.
@@ -52,6 +54,13 @@ Arguments:
     Grain: 3500
     Nfft: 7000
     Greedy?: false
+
+```
+
+Minimal header:
+```
+github.com/neputevshina/wireframe v0.1.0
+samples float64 1024
 
 ```
 
