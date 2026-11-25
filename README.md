@@ -1,4 +1,4 @@
-# Wireframe API standard
+# Wireframe API specification
 ## Motivation
 While developing Nanowarp, I really needed some feedback on algorithms and 
 bodged analysis output either through PNG generation or by outputting audio.
