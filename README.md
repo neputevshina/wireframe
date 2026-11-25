@@ -17,6 +17,7 @@ tabulation level is used for nesting and corresponding amount of `\t` specifies 
 Binary part is encoded in little-endian. Header is separated from data by `\n\n`.
 
 Default host's listen ports are 44444/udp and 44445/tcp, but most processes should communicate through stdin/stdout.
+E.g. `program -i file.wav | nc -u localhost 44444`
 
 Time codes in a valid Wireframe stream are monotonic. 
 A host **can not** cut excessive spaces, values are always separated using a single space. 
